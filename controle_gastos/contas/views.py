@@ -31,7 +31,7 @@ def nova_transacao(request):
         return redirect('url_listagem')
 
     data['form'] = form
-    return render(request, 'contas/form.html', data)
+    return render(request, 'contas/form_novo.html', data)
 
 def update(request, pk):
     data = {}
