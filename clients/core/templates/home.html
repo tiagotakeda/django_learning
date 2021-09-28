@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Document</title>
+    <style>
+        .multicolortext {
+            background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <center><h1 text><span class="multicolortext"></span>C L I E N T S</span></h1></center>
+    <br> 
+
+    <a href="/login">Login</a>
+    <a href="/admin">Admin</a>
+
+    <br>
+    <b>{{ valores }}</b>
+    <br>
+
+    <ul>
+    {% for i in valores %}
+        {{ i }}<br><br>
+    {% endfor %}
+    </ul>
+
+    <br>
+    <b>DIVISÍVEIS</b>
+
+    <ul>
+    {% for i in restos %}    
+        <li>{{ i }}</li>        
+    {% endfor %}
+    </ul>
+</body>
+</html>
